@@ -33,6 +33,7 @@ export default class Databinding extends Component {
         }
         return (
             <div className='container'>
+                
                 <p id="pText">{title}</p>
                 <hr />
                 <div className='card w-25 mt-2'>
