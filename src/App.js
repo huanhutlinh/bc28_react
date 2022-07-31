@@ -7,6 +7,10 @@ import Databinding from './Databinding/Databinding';
 import HandleEvent from './HandleEvent/HandleEvent';
 import StyleWithJSX from './StyleWithJSX/StyleWithJSX';
 import StateDemo from './StateDemo/StateDemo/StateDemo';
+import RenderWithMap from './RenderWithMap/RenderWithMap';
+import LayoutFilm from './RenderWithMap/LayoutFilm';
+import DemoProps from './Props/DemoProps/DemoProps';
+import ShoesShop from './Props/ShoesShop/ShoesShop';
 
 function App() {
   return (
@@ -15,7 +19,11 @@ function App() {
         {/* <Databinding /> */}
         {/* <HandleEvent /> */}
         {/* <StyleWithJSX /> */}
-        <StateDemo />
+        {/* <StateDemo /> */}
+        {/* <RenderWithMap /> */}
+        {/* <LayoutFilm /> */}
+        {/* <DemoProps /> */}
+        <ShoesShop />
       
     </div>
   );
