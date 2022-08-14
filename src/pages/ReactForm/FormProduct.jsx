@@ -20,9 +20,9 @@ export default class FormProduct extends Component {
     }
   }
 
+  
   handleChange = (event) => {
     let { value, id } = event.target;
-
     let dataType = event.target.getAttribute('data-type');
     // debugger;
     //Xử lý productInfo
@@ -58,7 +58,11 @@ export default class FormProduct extends Component {
   handleSubmit = (event) => {
     //Chặn sự kiện reload của browser
     event.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+
+    //khi người dùng bấm nút submit => gửi dữ liệu người dùng nhập từ state => ra hàm addproduct
+    this.props.addProduct(this.state.productInfo);
+
   }
 
   render() {
