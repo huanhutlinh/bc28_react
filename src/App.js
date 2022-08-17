@@ -27,10 +27,11 @@ function App() {
               <NavLink style={({isActive}) => isActive ? {borderRadius:'5px'} : {} } className={({isActive}) => isActive ? 'nav-link bg-light text-dark' : 'nav-link'  }  to="/lifecycle">Lifecycle</NavLink>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Redux</a>
               <div className="dropdown-menu" aria-labelledby="dropdownId">
-                <a className="dropdown-item" href="#">Action 1</a>
-                <a className="dropdown-item" href="#">Action 2</a>
+                <NavLink className="dropdown-item" to="/demonumber">Demo number</NavLink>
+                <NavLink className="dropdown-item" to="/demochonxe">Demo chọn xe</NavLink>
+                <NavLink className="dropdown-item" to="/democomment">Demo comment</NavLink>
               </div>
             </li>
           </ul>

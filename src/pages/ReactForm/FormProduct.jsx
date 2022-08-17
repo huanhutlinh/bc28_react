@@ -68,9 +68,7 @@ export default class FormProduct extends Component {
     console.log(currentState);
     //Khi bấm nút chỉnh sửa
       currentState.productInfo = newProps.productEdit;
-
       return currentState ;
-
   }
 
   // componentWillReceiveProps(newProps) {
@@ -95,7 +93,7 @@ export default class FormProduct extends Component {
                 className="form-control"
                 id="id"
                 name="id"
-                onInput={this.handleChange}
+                onChange={this.handleChange}
               />
               <p className="text-danger">{this.state.error.id}</p>
             </div>
@@ -106,7 +104,7 @@ export default class FormProduct extends Component {
                 className="form-control"
                 id="name"
                 name="name"
-                onInput={this.handleChange}
+                onChange={this.handleChange}
               />
               <p className="text-danger">{this.state.error.name}</p>
             </div>
@@ -118,7 +116,7 @@ export default class FormProduct extends Component {
                 className="form-control"
                 id="price"
                 name="price"
-                onInput={this.handleChange}
+                onChange={this.handleChange}
               />
               <p className="text-danger">{this.state.error.price}</p>
             </div>
