@@ -32,6 +32,8 @@ function App() {
                 <NavLink className="dropdown-item" to="/demonumber">Demo number</NavLink>
                 <NavLink className="dropdown-item" to="/demochonxe">Demo chọn xe</NavLink>
                 <NavLink className="dropdown-item" to="/democomment">Demo comment</NavLink>
+                <NavLink className="dropdown-item" to="/demoburger">Demo burger</NavLink>
+
               </div>
             </li>
           </ul>

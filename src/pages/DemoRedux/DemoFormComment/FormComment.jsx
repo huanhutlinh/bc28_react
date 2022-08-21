@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { store } from '../../../redux/configStore';
 
  class FormComment extends Component {
 
   handleSubmit = (e) =>{
     e.preventDefault();
+    //Gửi dữ liệu lên redux
+    const action = {
+      type:'HANDLE_SUBMIT',
+      payload: this.props.commentInfo
+    }
+    //Sử dụng this.props.dispatch gửi action lên store
+    this.props.dispatch(action);
   }
   handleChange = (e) => {
     const {id,value} = e.target;
@@ -20,6 +28,7 @@ import { connect } from 'react-redux'
   }
   render() {
     const {name,content} = this.props.commentInfo;
+    // console.log('state',store.getState()) ;
     return (
       <form onSubmit={this.handleSubmit}>
         <div className='form-group'>
@@ -32,6 +41,15 @@ import { connect } from 'react-redux'
         </div>
         <div className='form-group mt-2'>
             <button className='btn btn-success'>Comment</button>
+
+            <button type='button' className='btn btn-success' onClick={()=>{
+                const action = {
+                  type:'UPDATE_COMMENT',
+                }
+
+                this.props.dispatch(action);
+
+            }}>Update</button>
         </div>
       </form>
     )
